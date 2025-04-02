@@ -1,0 +1,20 @@
+<div class="player-container">
+    <img [src]="imageUrl" alt="Album Art" class="album-art">
+    <h3>{{ trackName || 'Unknown Track' }}</h3>
+
+    <audio #player [src]="mp3Url"></audio>
+    <div>
+        <button class="control" (click)="decreaseVolume(player)"><mat-icon>volume_down</mat-icon></button>
+        @if(!isPlaying){
+        <button class="control" (click)="play(player)"> <mat-icon>play_circle</mat-icon>
+        </button>
+        }
+        @if(isPlaying){
+
+        <button class="control" (click)="pause(player)">
+            <mat-icon>pause_circle</mat-icon>
+        </button>
+        }
+        <button class="control" (click)="increaseVolume(player)"><mat-icon>volume_up</mat-icon></button>
+    </div>
+</div>
