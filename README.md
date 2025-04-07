@@ -1,61 +1,81 @@
-# media-player
+# 🎵 Angular Mini Media Player
 
-# AngularPlayer
+An Angular-based mini media player that allows you to generate shareable links and keeps track of your previously generated links locally.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+## 🚀 Features
 
-## Development server
+- Play MP3 audio files with a custom image and title
+- Generate and store shareable links
+- Track previous links in local storage
+- Basic authentication using session storage
+- No backend needed – everything runs on the frontend using browser storage
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🛠️ Installation
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. **Clone the repository**
 
-## Code scaffolding
+   ```bash
+   git clone <your-repo-url>
+   cd <your-project-folder>
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. **Make sure you have [Node.js](https://nodejs.org/) and Angular CLI installed**
 
-```bash
-ng generate component component-name
-```
+   ```bash
+   npm install -g @angular/cli
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. **Install dependencies**
 
-```bash
-ng generate --help
-```
+   ```bash
+   npm install
+   ```
 
-## Building
+4. **Run the app**
 
-To build the project run:
+   ```bash
+   ng serve
+   ```
 
-```bash
-ng build
-```
+   Then navigate to: `http://localhost:4200`
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📦 How It Works
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### 📁 Authentication
 
-```bash
-ng test
-```
+- Basic login system using **session storage**.
+- User credentials (username & password) are stored in a session object.
+- The app checks this data on login to authenticate users.
 
-## Running end-to-end tests
+### 📥 Current Link
 
-For end-to-end (e2e) testing, run:
+- A special session storage item called `currentLinkObj` stores the **current MP3 URL, image URL, and title**.
+- On app load, it defaults to the provided values unless changed.
+- The media player reads from this object to load the current media.
 
-```bash
-ng e2e
-```
+### 🕓 Link History
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Previously generated links are stored in a `previousLinks` array in **session storage**.
+- Each item is a JSON object containing:
+  - `mp3Url`
+  - `imageUrl`
+  - `title`
+- When a new link is created via the form, it:
+  1. Replaces the `currentLinkObj`.
+  2. Appends the new link to the `previousLinks` array.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📌 Notes
+
+- This project uses **session and local storage** as a mock database – no backend or API involved.
+
+---
+
+## 🧑‍💻 Author
+
+Made with ❤️ by [Wassim]
