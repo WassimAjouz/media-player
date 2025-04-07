@@ -17,8 +17,8 @@ An Angular-based mini media player that allows you to generate shareable links a
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-project-folder>
+    git clone https://github.com/WassimAjouz/media-player.git
+    cd media-player
    ```
 
 2. **Make sure you have [Node.js](https://nodejs.org/) and Angular CLI installed**
