@@ -40,7 +40,8 @@ An Angular-based mini media player that allows you to generate shareable links a
    ```
 
    Then navigate to: `http://localhost:4200`
-
+    Username: podeo
+    Password: 123456
 ---
 
 ## 📦 How It Works
