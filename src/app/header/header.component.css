@@ -2,10 +2,18 @@ header {
     background-color: #1d1d1d;
     margin-bottom: 20px;
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 
 .logo {
     height: 50px;
     width: 50px;
+}
+
+span {
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
 }

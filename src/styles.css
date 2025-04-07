@@ -1,17 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Arabic:wght@100..900&family=Vidaloka&display=swap');
+
+:root {
+    --main-color: #0001fd;
+    --main-font: "Roboto, " Helvetica Neue", sans-serif";
+}
 
 html,
 body {
+    font-family: var(--main-font);
     height: 100%;
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #e8e8e8;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+input {
+    font-family: var(--main-font);
+
+}
 
 
 img {
     width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+input {
+    height: 24px;
+    border: 1px solid lightgrey;
+    padding-left: 8px;
+}
+
+input:focus {
+    /* background: red; */
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+input:read-only {
+    height: 31px;
+}
+
+input:read-only:focus {
+    border: 1px solid lightgrey;
+}
+
+
+.btn-icon {
+    background: #0001fd;
+    height: auto;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+
+.error {
+    color: red;
 }

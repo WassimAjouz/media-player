@@ -1,0 +1,17 @@
+<div class="card flex flex-col">
+    <label class="mb-20" for="color">
+        Main Color
+        <input id="color" type="color" [(ngModel)]="color" required>
+    </label>
+
+    <label class="mb-20" for="Font">
+        Font
+        <select [(ngModel)]="font" id="font">
+            <option value='"Cabin", sans-serif'>Cabin Sans</option>
+            <option value='"Vidaloka", serif'>Vidaloka Serif</option>
+            <option value='"Noto Sans Arabic", sans-serif'>Noto Sans Arabic</option>
+            <option value='Roboto,"Helvetica Neue", sans-serif'>Roboto</option>
+        </select>
+    </label>
+    <button class="btn-primary" (click)="saveOptions()">Save</button>
+</div>

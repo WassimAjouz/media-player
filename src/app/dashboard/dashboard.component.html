@@ -1,0 +1,25 @@
+<div class="card dashboard-container">
+    <h2>Create a Shareable Media Link</h2>
+
+    <div class="flex flex-col">
+        <label>MP3 URL</label>
+        <input class="mb-20" type="text" [(ngModel)]="mp3Url" required />
+
+        <label>Image URL</label>
+        <input class="mb-20" type="text" [(ngModel)]="imageUrl" required />
+
+        <label>Track Name</label>
+        <input class="mb-20" type="text" [(ngModel)]="trackName" required />
+
+        <button class="btn-primary" (click)="generateLink()">Generate Link</button>
+    </div>
+
+
+    <div *ngIf="shareableLink">
+        <p>Shareable Link</p>
+        <input style="width: calc(100% - 198px); margin-right: 20px;" type="text" [value]="shareableLink" readonly />
+        <span class="btn-primary" (click)="copyToClipboard()"> Copy To Clipboard
+        </span>
+    </div>
+
+</div>

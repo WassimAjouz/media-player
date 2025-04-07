@@ -1,0 +1,7 @@
+<div style="max-width: 360px; margin: auto; margin-top: 120px;" class="card flex flex-col">
+    <h3 class="mb-20">Login</h3>
+    <input placeholder="Username" class="mb-20" type="text" [(ngModel)]="username" required>
+    <input placeholder="Password" class="mb-20" type="password" [(ngModel)]="password" required>
+    <p *ngIf="!found" class="error">Wrong Credentials</p>
+    <button class="btn-primary" (click)="login()">Login</button>
+</div>

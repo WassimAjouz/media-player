@@ -1,12 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Arabic:wght@100..900&family=Vidaloka&display=swap');
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.control {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
 
 .player-container {
     text-align: center;
-    background-color: #0001fd17;
+    background-color: #fff;
     padding: 30px;
     width: 340px;
-    border-radius: 20px;
-    margin: auto;
+    border-radius: 8px;
+    margin: 20px;
     color: #1d1d1d;
     font-family: "Noto Sans Arabic", sans-serif;
     font-optical-sizing: auto;
@@ -15,15 +26,35 @@
         "wdth" 100;
 }
 
-img {
+table {
     width: 100%;
-    border-radius: 20px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.control {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: #0001fd;
-    cursor: pointer;
+thead {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+h3 {
+    margin: 0;
 }
